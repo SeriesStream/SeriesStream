@@ -10,4 +10,4 @@ ADD ./target/series-stream-0.0.3-SNAPSHOT.jar /app
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "series-stream-0.0.2-SNAPSHOT.jar"]
+CMD ["java", "-jar", "series-stream-0.0.3-SNAPSHOT.jar"]
