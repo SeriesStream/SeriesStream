@@ -24,10 +24,12 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
+import com.kumuluz.ee.logs.cdi.Log;
 
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 @Path("customers")
+@Log
 public class CustomerResource {
 
     @GET

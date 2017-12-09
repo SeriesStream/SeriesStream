@@ -27,11 +27,15 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import com.kumuluz.ee.logs.LogManager;
+import com.kumuluz.ee.logs.Logger;
 
 
 @Produces(MediaType.APPLICATION_JSON)
 @Path("proc")
 public class ProcResource {
+
+    private Logger log = LogManager.getLogger(ProcResource.class.getName());
 
     public static long fibonacci(int n) {
         if (n <= 1) return n;
@@ -43,6 +47,7 @@ public class ProcResource {
     public Response getProc(@PathParam("fibNum") int fibNum) {
         if(fibNum > 50) fibNum = 50;
         System.out.println("Big CPU geted");
+        log.info("Big CPU geted " + fibNum);
         Info info = new Info();
         return Response.ok(fibonacci(fibNum)).build();
     }

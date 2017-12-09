@@ -6,7 +6,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD ./target/series-stream-0.0.2-SNAPSHOT.jar /app
+ADD ./target/series-stream-0.0.3-SNAPSHOT.jar /app
 
 EXPOSE 8080
 

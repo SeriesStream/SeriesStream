@@ -23,10 +23,6 @@ package com.fri.series.stream;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-/**
- * @author Benjamin Kastelic
- * @since 2.3.0
- */
 @ApplicationPath("v1")
 public class ProcApplication extends Application {
 }
