@@ -20,6 +20,7 @@
 */
 package com.fri.series.stream;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -30,6 +31,7 @@ import com.kumuluz.ee.logs.cdi.Log;
 @Produces(MediaType.APPLICATION_JSON)
 @Path("customers")
 @Log
+@ApplicationScoped
 public class CustomerResource {
 
     @GET

@@ -17,7 +17,7 @@
 
     <groupId>com.fri.series.stream</groupId>
     <artifactId>series-stream</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
 	
 	<licenses>
         <license>
@@ -89,6 +89,10 @@
         <dependency>
             <artifactId>kumuluzee-logs-log4j2</artifactId>
             <groupId>com.kumuluz.ee.logs</groupId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-cdi-weld</artifactId>
         </dependency>
 
     </dependencies>
