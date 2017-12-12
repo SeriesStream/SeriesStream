@@ -6,9 +6,9 @@ kumuluzee:
   config:
     etcd:
       hosts: http://159.8.79.87:30024
-    discovery:
-      etcd:
-        hosts: http://159.8.79.87:30024/
+  discovery:
+    etcd:
+      hosts: http://159.8.79.87:30024
   logs:
       config-file: '<?xml version="1.0" encoding="UTF-8"?>
                     <Configuration name="orders">

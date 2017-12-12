@@ -22,11 +22,13 @@ package com.fri.series.stream;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
+import com.kumuluz.ee.discovery.annotations.RegisterService;
 
 /**
  * @author Benjamin Kastelic
  * @since 2.3.0
  */
 @ApplicationPath("v1")
+@RegisterService
 public class CustomerApplication extends Application {
 }
