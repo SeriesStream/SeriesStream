@@ -17,7 +17,7 @@
 
     <groupId>com.fri.series.stream</groupId>
     <artifactId>series-stream</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
 	
 	<licenses>
         <license>
@@ -97,6 +97,10 @@
         <dependency>
             <groupId>com.kumuluz.ee.discovery</groupId>
             <artifactId>kumuluzee-discovery-etcd</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.health</groupId>
+            <artifactId>kumuluzee-health</artifactId>
         </dependency>
 
     </dependencies>
