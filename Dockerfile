@@ -6,8 +6,8 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD ./target/series-stream-0.0.5-SNAPSHOT.jar /app
+ADD ./target/series-stream-0.0.6-SNAPSHOT.jar /app
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "series-stream-0.0.5-SNAPSHOT.jar"]
+CMD ["java", "-jar", "series-stream-0.0.6-SNAPSHOT.jar"]

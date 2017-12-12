@@ -21,6 +21,7 @@
 package com.fri.series.stream;
 
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -29,8 +30,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
+import org.eclipse.microprofile.metrics.annotation.Metered;
 
-
+@ApplicationScoped
 @Produces(MediaType.APPLICATION_JSON)
 @Path("proc")
 public class ProcResource {
@@ -43,11 +45,12 @@ public class ProcResource {
     }
 
     @GET
+    @Metered
     @Path("{fibNum}")
     public Response getProc(@PathParam("fibNum") int fibNum) {
         if(fibNum > 50) fibNum = 50;
         System.out.println("Big CPU geted");
-        log.info("Big CPU geted " + fibNum);
+        //log.info("Big CPU geted " + fibNum);
         Info info = new Info();
         return Response.ok(fibonacci(fibNum)).build();
     }
