@@ -79,12 +79,12 @@ public class Info {
     }
 
     public Info(){
-        this.setGithub(Arrays.asList("https://github.com/SeriesStream/SeriesStream"));
-        this.setMikrostoritve(Arrays.asList());
-        this.setDockerhub(Arrays.asList("https://hub.docker.com/r/lavrinec/series-stream/"));
+        this.setGithub(Arrays.asList("https://github.com/SeriesStream/SeriesStream", "https://github.com/SeriesStream/SeriesStream-catalog", "https://github.com/SeriesStream/SeriesStream-parcheese"));
+        this.setMikrostoritve(Arrays.asList("http://159.8.79.87:30933/v1/series/", "http://159.8.79.87:30933/v1/episodes/", "http://159.8.79.87:31522/v1/parcheeses"));
+        this.setDockerhub(Arrays.asList("https://hub.docker.com/r/lavrinec/series-stream/", "https://hub.docker.com/r/lavrinec/series-stream-catalog/", "https://hub.docker.com/r/lavrinec/series-stream-parcheese/"));
         this.setOpisProjekta("SeriesStream je aplikacija, ki je namenjenja spletnim pretočnim vsebinam, med katerimi izstopajo predvsem serije.");
         this.setClani(Arrays.asList("ml9987"));
-        this.setTravis(Arrays.asList("https://travis-ci.org/SeriesStream/SeriesStream"));
+        this.setTravis(Arrays.asList("https://travis-ci.org/SeriesStream/SeriesStream", "https://travis-ci.org/SeriesStream/SeriesStream-catalog", "https://travis-ci.org/SeriesStream/SeriesStream-parcheese"));
     }
 
 }
