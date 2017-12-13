@@ -23,11 +23,11 @@ spec:
             port: server
           initialDelaySeconds: 20
           periodSeconds: 5
-        livenessProbe:
+        readinessProbe:
           httpGet:
             path: /health
             port: server
-          initialDelaySeconds: 20
+          initialDelaySeconds: 10
           periodSeconds: 3
         ports:
         - containerPort: 8080
