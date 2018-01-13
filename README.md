@@ -5,7 +5,7 @@ mvn clean package
 ```
 ## Run
 ```
-java -jar target/series-stream-0.0.7-SNAPSHOT.jar
+java -jar target/series-stream-0.0.8-SNAPSHOT.jar
 ```
 ## Docker
 ### Build docker

@@ -22,10 +22,7 @@ package com.fri.series.stream;
 
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import com.kumuluz.ee.logs.LogManager;
@@ -36,6 +33,10 @@ import org.eclipse.microprofile.metrics.annotation.Metered;
 @Produces(MediaType.APPLICATION_JSON)
 @Path("proc")
 public class ProcResource {
+
+    private boolean healthy = true;
+
+    public boolean getHealthy () { return this.healthy; }
 
     private Logger log = LogManager.getLogger(ProcResource.class.getName());
 
@@ -48,8 +49,12 @@ public class ProcResource {
     @Metered
     @Path("{fibNum}")
     public Response getProc(@PathParam("fibNum") int fibNum) {
-        if(fibNum > 50) fibNum = 50;
+        if(fibNum > 50){
+            fibNum = 50;
+            this.healthy = false;
+        }
         System.out.println("Big CPU geted");
+        if(! healthy) throw new InternalServerErrorException();
         //log.info("Big CPU geted " + fibNum);
         Info info = new Info();
         return Response.ok(fibonacci(fibNum)).build();
